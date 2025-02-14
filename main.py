@@ -18,11 +18,13 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
+        # update player
+        player.update(dt)
+        
         # fill screen with color
         screen.fill("black")
         # re-render player on screen each frame
         player.draw(screen)
-
         # flip() the display to refresh screen
         pygame.display.flip()
 
