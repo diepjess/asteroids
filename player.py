@@ -66,6 +66,11 @@ class Player(CircleShape):
         self.position += forward * PLAYER_SPEED * dt
     
     def shoot(self):
+        """Shoots a Shot object.
+        Will not shoot if on shot timer is on cooldown.
+        Create a Shot object at same position as player.
+        Set shot velocity to be same direction player is facing, scaled up.
+        """
         if self.shoot_timer > 0:
             return
         self.shoot_timer = PLAYER_SHOOT_COOLDOWN
