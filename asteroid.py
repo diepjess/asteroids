@@ -15,7 +15,7 @@ class Asteroid(CircleShape):
         Returns:
             pygame.Rect: Rect bounding the changed pixels
         """
-        return pygame.draw.circle(screen, "white", self.position, self.radius, 2)
+        pygame.draw.circle(screen, "white", self.position, self.radius, 2)
 
     def update(self, dt):
         """Update position of asteroid to move in straight line

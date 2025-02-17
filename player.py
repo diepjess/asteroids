@@ -30,7 +30,7 @@ class Player(CircleShape):
         color = "white"
         points = self.triangle()
         line_width = 2
-        return pygame.draw.polygon(screen, color, points, line_width)
+        pygame.draw.polygon(screen, color, points, line_width)
     
     def rotate(self, dt):
         """Update rotation value based on delta time
